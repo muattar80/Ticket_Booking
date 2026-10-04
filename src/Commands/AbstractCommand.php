@@ -9,7 +9,7 @@ abstract class AbstractCommand
     public static function make(CommandInfo $commandInfo): AbstractCommand
     {
         $className = __NAMESPACE__ . '\\' . mb_ucfirst($commandInfo->command) . 'Command';
-        if (class_exists($className)) {
+        if (!class_exists($className)) {
             return new NullCommand();
         } else {
             $command = new $className();

@@ -9,6 +9,6 @@ enum BookingStatus: string
 
     public function canBookTicket()
     {
-    return $this !== self::NEW;
+    return $this !== self::PAID;
     }
 }

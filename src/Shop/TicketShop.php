@@ -30,7 +30,15 @@ class TicketShop
         $this->booking = new Booking();
     }
 
-    public function createBooking(): Booking
+    public function cancelBooking(): void
+    {
+        $this->booking = null;
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function currBooking(): Booking
     {
         if (!$this->booking){
             throw new \Exception("Booking not created");
