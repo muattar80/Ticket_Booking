@@ -1,1 +1,1 @@
-###simple project: for learning purposes
+simple project: for learning purposes
